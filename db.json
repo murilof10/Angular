@@ -1,0 +1,25 @@
+{
+  "clientes": [
+    {
+      "nome": "Localstack",
+      "sobrenome": "Local",
+      "endereco": "Rua A, numero 1",
+      "contato": "11 91111-1111",
+      "id": "a4313fb7-ae28-43cb-bd1f-c5f475503154"
+    },
+    {
+      "nome": "AWS",
+      "sobrenome": "S3",
+      "endereco": "Rua B, numero 2",
+      "contato": "22 92222-2222",
+      "id": "e1f2cc63-3e96-41d3-aaa0-3d53095fa69d"
+    },
+    {
+      "nome": "Angular",
+      "sobrenome": "Bootstrap",
+      "endereco": "Rua C, numero 3",
+      "contato": "33 93333-3333",
+      "id": "2feceb86-b9c4-42f6-912b-4adad9bd56ad"
+    }
+  ]
+}

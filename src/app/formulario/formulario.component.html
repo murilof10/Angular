@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-12">
+        <h3>Formulário de clientes</h3>
+    </div>
+</div>
+
+<div class="row">
+    <form [formGroup]="form">
+        
+        <div class="col-12">
+            <div class="form-group">
+                <label for="id-input">Nome</label>
+                <input required matInput placeholder="Nome" formControlName="nome" class="form-control" id="id-input">
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div class="form-group">
+                <label for="id-sobrenome">Sobrenome</label>
+                <input required matInput placeholder="Sobrenome" formControlName="sobrenome" class="form-control" id="id-sobrenome">
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <div class="form-group">
+                <label for="id-endereco">Endereço</label>
+                <input required matInput placeholder="Endereço" formControlName="endereco" class="form-control" id="id-endereco">
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div class="form-group">
+                <label for="id-contato">Contato</label>
+                <input required matInput placeholder="Contato" formControlName="contato" class="form-control" id="id-contato" type="tel">
+            </div>
+        </div>
+        
+    </form>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <button mat-raised-button color="primary" [disabled]="!form.valid" (click)="tratamentoCliente()">Adicionar</button>
+        <button mat-raised-button mat-dialog-close class="ml-2">Cancelar</button>
+    </div>
+</div>

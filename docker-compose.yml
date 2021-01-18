@@ -1,0 +1,24 @@
+version: '2.1'
+
+services:
+  localstack:
+    container_name: "${LOCALSTACK_DOCKER_NAME-localstack_main}"
+    image: localstack/localstack
+    network_mode: bridge
+    ports:
+      - "4566:4566" #S3
+      - "${PORT_WEB_UI-8080}:${PORT_WEB_UI-8080}"
+    environment:
+      - SERVICES=s3
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      # AWS CONFIG
+      - AWS_ACCESS_KEY_ID=KEYEXAMPLE
+      - AWS_SECRET_ACCESS_KEY=SECRETKEYEXAMPLE
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_DEFAULT_OUTPUT=json
+    volumes:
+      - ./localstack/data:/tmp/localstack/data
+      - ./localstack/s3:/root/localstack/s3
+      - ./localstack/config:/root/localstack/config
